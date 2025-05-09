@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/dark_blue_background"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_my_profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:textColor="@color/text_color_light"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:contentDescription="@string/content_description_profile_icon"
+            app:tint="@color/text_color_light"/>
+
+        <TextView
+            android:id="@+id/textViewProfileUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/placeholder_username"
+            android:textSize="18sp"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/text_color_light"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonEditTopics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_edit_topics"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/dark_card_background"  app:icon="@android:drawable/ic_menu_edit"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/buttonViewBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_view_bookmarks"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/dark_card_background"  app:icon="@drawable/ic_bookmark_filled"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/buttonProfileLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_logout"
+        android:backgroundTint="@android:color/holo_red_light"
+        app:icon="@android:drawable/ic_menu_revert"
+        app:iconTint="@color/white"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

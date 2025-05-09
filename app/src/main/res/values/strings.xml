@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choose_topics_title">Choose Your Favorite Topics</string>
+    <string name="save_topics_button">Save Topics &amp; Continue</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="text_register_prompt">Don\'t have an account? Register here.</string>
+    <string name="hint_register_username">Choose Username</string>
+    <string name="hint_register_password">Choose Password</string>
+    <string name="hint_register_confirm_password">Confirm Password</string>
+    <string name="button_register">Register</string>
+    <string name="text_go_to_login">Already have an account? Login here.</string>
+    <string name="text_no_news_available">No news available for your selected topics.</string>
+    <string name="content_description_news_image">News image</string>
+    <string name="placeholder_news_title">News Title</string>
+    <string name="placeholder_news_description">News description goes here. It can be a few lines long.</string>
+    <string name="placeholder_news_published_at">Published: YYYY-MM-DD</string>
+    <string name="content_description_bookmark_button">Bookmark button</string>
+    <string name="title_my_profile">My Profile</string>
+    <string name="placeholder_username">Username: John Doe</string>
+    <string name="button_edit_topics">Edit My Topics</string>
+    <string name="button_view_bookmarks">View My Bookmarks</string>
+    <string name="button_logout">Logout</string>
+    <string name="content_description_profile_icon">Profile icon</string>
+    <string name="no_bookmarked_articles">You have no bookmarked articles.</string>
+</resources>

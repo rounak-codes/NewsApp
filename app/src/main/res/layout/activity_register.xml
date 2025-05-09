@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/dark_blue_background"
+    tools:context="com.android.newsapp.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAppLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="32dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="@string/app_name" />
+
+    <EditText
+        android:id="@+id/editTextRegisterUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_register_username"
+        android:minHeight="48dp"
+        android:inputType="text"
+        android:autofillHints="username"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/text_color_medium"/>
+
+    <EditText
+        android:id="@+id/editTextRegisterPassword"
+        android:layout_width="match_parent"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/hint_register_password"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/text_color_medium"/>
+
+    <EditText
+        android:id="@+id/editTextRegisterConfirmPassword"
+        android:layout_width="match_parent"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/hint_register_confirm_password"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/text_color_medium"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_register"
+        android:backgroundTint="@color/icon_accent"/>  <TextView
+    android:id="@+id/textViewGoToLogin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:minHeight="48dp"
+    android:text="@string/text_go_to_login"
+    android:textColor="@color/text_color_light"
+    android:clickable="true"
+    android:focusable="true"
+    android:autofillHints="password"/>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="@color/dark_blue_background"
+    tools:context="com.android.newsapp.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAppLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="32dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="@string/app_name" />
+
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="@string/hint_username"
+        android:inputType="text"
+        android:autofillHints="username"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/text_color_medium"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minHeight="48dp"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:autofillHints="password"
+        android:textColor="@color/text_color_light"
+        android:textColorHint="@color/text_color_medium"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/button_login"
+        android:backgroundTint="@color/icon_accent"/>  <TextView
+    android:id="@+id/textViewGoToRegister"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="48dp"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_marginTop="16dp"
+    android:text="@string/text_register_prompt"
+    android:textColor="@color/text_color_light"
+    android:clickable="true"
+    android:focusable="true" />
+
+</LinearLayout>

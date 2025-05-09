@@ -1,0 +1,72 @@
+// This is the module-level build.gradle file, usually located at app/build.gradle
+// Groovy DSL version - Updated for project name "NewsApp"
+
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.android.newsapp'
+    compileSdkVersion 35
+    buildFeatures {
+        buildConfig true // This is good, ensures BuildConfig is generated
+    }
+    defaultConfig {
+        applicationId "com.android.newsapp"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // FIXED: Proper API key reference - proper quoting and no ${project.property()} wrapper
+        // since we're directly accessing a Gradle property
+        buildConfigField "String", "NEWS_API_KEY_1", "\"${NEWS_API_KEY_1}\""
+        buildConfigField "String", "NEWS_API_KEY_2", "\"${NEWS_API_KEY_2}\""
+        buildConfigField "String", "NEWS_API_KEY_3", "\"${NEWS_API_KEY_3}\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+}
+
+dependencies {
+    // AndroidX Core Libraries
+    implementation libs.androidx.appcompat.v161
+    implementation libs.androidx.core.ktx.v1120 // Can be replaced with 'androidx.core:core:1.12.0' if strictly no Kotlin
+    implementation libs.androidx.constraintlayout.v214
+
+    // Material Design Components
+    implementation libs.material.v1110
+
+    // UI Components
+    implementation libs.androidx.recyclerview
+    implementation libs.androidx.viewpager2
+    implementation libs.androidx.cardview
+
+    // Networking
+    implementation libs.volley
+
+    // JSON Parsing
+    implementation libs.gson
+
+    // Image Loading
+    implementation libs.glide
+    // annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0' // For Groovy, if you need Glide's generated API
+
+    // Swipe to Refresh Layout
+    implementation libs.androidx.swiperefreshlayout
+    implementation libs.androidx.activity
+
+    // Testing Libraries
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit.v115
+    androidTestImplementation libs.androidx.espresso.core.v351
+}

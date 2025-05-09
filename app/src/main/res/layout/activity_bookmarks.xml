@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/icon_accent"  tools:context=".BookmarksActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_blue_background"
+        app:title="My Bookmarks"  app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarBookmarks"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewNoBookmarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_bookmarked_articles"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:textColor="@color/text_color_light"  />
+
+</RelativeLayout>
